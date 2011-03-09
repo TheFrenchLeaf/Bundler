@@ -1,0 +1,16 @@
+This is a modified version of Bundler.
+
+Main modification was done in order to compile Bundler on Linux,
+ Windows and Mac with CMake build system generator.
+
+Authors : 
+[main author] 		Noah Snavely snavely[AT]cs.cornell.edu
+[Windows Porting] Pierre moulon pmoulon[AT]gmail.com
+[Mac Porting] Kai Ni http://www.kaini.org/
+
+--------------------
+- Web ressources : - 
+--------------------
+[Bundler] http://phototour.cs.washington.edu/bundler/
+[CMake version] http://francemapping.free.fr/Portfolio/Prog3D/BUNDLER.html
+				https://github.com/TheFrenchLeaf/Bundler

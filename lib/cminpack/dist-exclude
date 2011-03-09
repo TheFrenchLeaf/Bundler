@@ -1,0 +1,6 @@
+.svn
+CVS
+*.o
+*~
+#*#
+cminpack-*.tar.gz

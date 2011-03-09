@@ -1,0 +1,11 @@
+
+
+INCLUDE_DIRECTORIES("../matrix")
+# list sources files
+FILE(GLOB LIBRARY_FILES_C "./*.c")
+FILE(GLOB LIBRARY_FILES_H "./*.h")
+
+ADD_LIBRARY(sba-1.5
+${LIBRARY_FILES_C}
+${LIBRARY_FILES_H}
+)

@@ -1,0 +1,12 @@
+INCLUDE_DIRECTORIES("../imagelib")
+
+ADD_DEFINITIONS(-D__NO_MKL__ -DNO_CBLAS)
+
+# list sources files
+FILE(GLOB LIBRARY_FILES_C "./*.c")
+FILE(GLOB LIBRARY_FILES_H "./*.h")
+
+ADD_LIBRARY(matrix
+${LIBRARY_FILES_C}
+${LIBRARY_FILES_H}
+)
