@@ -4,9 +4,10 @@ Main modification was done in order to compile Bundler on Linux,
  Windows and Mac with CMake build system generator.
 
 Authors : 
-[main author] 		Noah Snavely snavely[AT]cs.cornell.edu
-[Windows Porting] Pierre moulon pmoulon[AT]gmail.com
-[Mac Porting] Kai Ni http://www.kaini.org/
+[Original code author]  Noah Snavely snavely[AT]cs.cornell.edu
+
+[Initial Cmake port ]	Pierre moulon pmoulon[AT]gmail.com
+[Mac Porting]     		Kai Ni http://www.kaini.org/
 
 --------------------
 - Web ressources : - 
