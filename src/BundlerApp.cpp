@@ -180,7 +180,7 @@ void PrintUsage()
 	   "      --fisheye <paramfile>\n"
 	   "         Read fisheye parameters from given file\n"
 	   "      --init_pair1 <img1>\n"
-	   "      --init_pair2 <img1>\n"
+	   "      --init_pair2 <img2>\n"
 	   "         Indices of the images with which to seed\n"
            "         bundle adjustment\n"
            "      --estimate_distortion\n"
