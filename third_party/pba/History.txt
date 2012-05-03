@@ -1,0 +1,23 @@
+1.0.3
+Added support of constant cameras (CameraT::SetConstantCamera)
+	* Causes sligh slow-down of standard pipeline 
+	* Can be disabled by defining PBA_DISABLE_CONST_CAMERA
+Automatic switching from GPU to CPU if CUDA is not supported
+	* Will not switch back 
+Fixed a problem with Windows DLL function name
+	
+1.0.2
+Choosing thread count according to the number of CPU cores. 
+	* This might be slightly better than the fixed parameters
+	* This is still very herristic and not really optimal.
+	* The settings are still tunned for very large data. 
+Added two additional Bundle Adjustment Modes (Motion only & Structure only)
+	* Call ParallelBA::SetNextBundleMode() to set the mode
+
+1.0.1
+Converted MSVC solution files to visual studio 2010
+Added the first draft of manual
+Added CMakeFile (Provided by Pierre Moulon)
+
+1.0.0 (06/2011)
+The first release

@@ -1,0 +1,34 @@
+//------------------------------------------------------------------
+// TWO RADIAL DISTORTION MODELs:  
+//
+//        PBA_PROJECTION_DISTORTION = 1    //single parameter; applies to projections
+//        ------------------------------------------------------------
+//        Given camera K[R T], radial distortion r, and a 3D point X.
+//		  Let the calibration matrix be K = [f, 0 0; 0 f  0; 0 0 1].
+//        The normalized projection is [x, y, z]' = (RX + T).
+//		  The 2D projection is (xn, yn)' = (x/z, y/z)'
+//		  Let r2 = r * (xn * xn + zn * zn)
+//		  The distroted projection is (1 + r2) * f * (xn, yn)'
+//        Let the measurement be [mx, my] 
+//        Then, the reprojection error is [(1 + r2)xn -  mx, (1 + r2) yn - my]
+//		  You can use the second order parameter from the Matlab Camera 
+//		  Calibration Toolbox.
+//
+//
+//        PBA_MEASUREMENT_DISTORTION = -1, //single parameter; applies to measurements
+//        ------------------------------------------------------------
+//        Given camera K[R T], radial distortion r, and a 3D point X.
+//		  Let the calibration matrix be K = [f, 0 0; 0 f  0; 0 0 1].
+//        The real rojection is [x, y, z]' = K(RX + T) -> (x/z, y/z)'
+//        Denote the distorted measument as [mx, my] 
+//        The distortion factor is r2 = r * (mx * mx + my * my)
+//        The real measument is (1 + r2) * [mx, my]
+//        Then, the reprojection error is [x/z - (1 + r2) mx, y /z - (1 + r2) my]
+//        ------------------------------------------------------------------
+//        This model is easy for computing reprojection/jacobians
+//        of feature points, but slightly harder for generating 
+//        undistorted images (need to solve cubic equations)
+//        -----------------------------------------------------------
+//        If you have the second order radial distortion r' from the
+//        Matlab Camera calibration Toolbox, the approximate value for 
+//        the radial distortion here can be  -r'/f/f

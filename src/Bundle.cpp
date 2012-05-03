@@ -41,6 +41,8 @@
 #include "Epipolar.h"
 #include "Distortion.h"
 
+#include "pba/src/pba/interface.h"
+
 /* Use a 180 rotation to fix up the intrinsic matrix */
 void FixIntrinsics(double *P, double *K, double *R, double *t) 
 {
@@ -604,7 +606,8 @@ double BundlerApp::RunSFM(int num_pts, int num_cameras, int start_camera,
         bool fixed_focal = m_fixed_focal_length;
         clock_t start = clock();
 
-        run_sfm(nz_count, num_cameras, start_camera, vmask, projections, 
+        run_sfm_pba(nz_count, num_cameras, start_camera,
+		    vmask, projections, 
             fixed_focal ? 0 : 1, 0,
             m_estimate_distortion ? 1 : 0, 1,
             init_camera_params, nz_pts, 

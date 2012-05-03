@@ -18,6 +18,7 @@ INCLUDE_DIRECTORIES(
 ./lib/zlib
 ./lib/5point
 ./lib/getopt
+./third_party
 )
 ELSE(WIN32)
 INCLUDE_DIRECTORIES(
@@ -30,9 +31,11 @@ INCLUDE_DIRECTORIES(
 ./lib/zlib
 ./lib/5point
 ./lib/getopt
+./third_party
 )
 ENDIF(WIN32)
 
 ADD_SUBDIRECTORY(src)
 ADD_SUBDIRECTORY(lib)
+ADD_SUBDIRECTORY(third_party)
 
