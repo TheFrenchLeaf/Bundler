@@ -1,3 +1,6 @@
+2012-04-03 Pierre Moulon <pmoulon[AT]gmail.com>
+		* add dangelo multithread ANN matching step
+		  * https://bitbucket.org/dangelo/bundler/
 2010-09-04 Pierre Moulon <pmoulon[AT]gmail.com>
 		* Add a CMake base system.
 		* Update minpack from 1.0 to 1.0.3

@@ -14,6 +14,15 @@ ELSE(WIN32)
 SET(MATH_LIBS lapack cblas cminpack -lgfortran)
 ENDIF(WIN32)
 
+#Detect OpenMP
+FIND_PACKAGE(OpenMP) 
+if (OPENMP_FOUND) 
+  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+  option(USE_OPENMP "Use OpenMP for parallelization" ON)
+else(OPENMP_FOUND)
+  option(USE_OPENMP "Use OpenMP for parallelization" OFF)
+endif (OPENMP_FOUND)
+
 ADD_EXECUTABLE(KeyMatchFull KeyMatchFull.cpp keys2a.cpp)
 TARGET_LINK_LIBRARIES(KeyMatchFull ann_1.1_char zlib)
 

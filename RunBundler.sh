@@ -31,8 +31,8 @@ then
     MATCHKEYS=$BASE_PATH/bin/KeyMatchFull.exe
     BUNDLER=$BASE_PATH/bin/Bundler.exe
 else
-    MATCHKEYS=$BASE_PATH/bin/KeyMatchFull
-    BUNDLER=$BASE_PATH/bin/bundler
+    MATCHKEYS=$BASE_PATH/Output/src/KeyMatchFull
+    BUNDLER=$BASE_PATH/Output/src/Bundler
 fi
 
 TO_SIFT=$BASE_PATH/bin/ToSift.sh
