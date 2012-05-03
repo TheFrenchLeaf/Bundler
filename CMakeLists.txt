@@ -18,7 +18,6 @@ INCLUDE_DIRECTORIES(
 ./lib/zlib
 ./lib/5point
 ./lib/getopt
-./third_party
 )
 ELSE(WIN32)
 INCLUDE_DIRECTORIES(
@@ -31,7 +30,6 @@ INCLUDE_DIRECTORIES(
 ./lib/zlib
 ./lib/5point
 ./lib/getopt
-./third_party
 )
 ENDIF(WIN32)
 
