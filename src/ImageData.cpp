@@ -84,7 +84,7 @@ int CompareImageDates(ImageDate *date1, ImageDate *date2)
     return 0;
 }
 
-static char *month_strings[] = 
+static const char *month_strings[] = 
     { "January",
       "February",
       "March",
@@ -183,7 +183,7 @@ void ImageNote::Read(FILE *f, double width, double height)
 }
 
 /* Initialize the image data given a string description */
-void ImageData::InitFromString(char *buf, char *path, bool fisheye_by_default) 
+void ImageData::InitFromString(char *buf, const char *path, bool fisheye_by_default) 
 {
     /* Eat the newline */
     if (buf[strlen(buf)-1] == '\n')
@@ -2026,7 +2026,7 @@ void ImageData::WriteCamera()
 /* Write the camera in XML format */
 void ImageData::WriteCameraXML(FILE *f)
 {
-    static char *spacer = "  ";
+    static const char *spacer = "  ";
 
     fprintf(f, "%s<camera>\n", spacer);
     fprintf(f, "%s  <w> %d </w>\n%s  <h> %d </h>\n", 

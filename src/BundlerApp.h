@@ -519,7 +519,7 @@ public:
 
     char *m_bundle_output_file;  /* Output file names for BA */
     char *m_bundle_output_base;
-    char *m_output_directory;
+    const char *m_output_directory;
 
     bool m_compute_covariance;   /* Compute the covariance of a
                                   * reconstruction */

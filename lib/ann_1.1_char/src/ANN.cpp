@@ -167,7 +167,7 @@ ANNbool ANNorthRect::inside(int dim, ANNpoint p)
 //	Error handler
 //----------------------------------------------------------------------
 
-void ann_1_1_char::annError(char *msg, ANNerr level)
+void ann_1_1_char::annError(const char *msg, ANNerr level)
 {
 	if (level == ANNabort) {
 		cerr << "ANN: ERROR------->" << msg << "<-------------ERROR\n";

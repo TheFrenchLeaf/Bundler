@@ -743,7 +743,7 @@ void BaseApp::ClearModel()
 #ifndef __DEMO__
 /* Dump an output file containing information about the current
 * state of the world */
-void BaseApp::DumpOutputFile(char *output_dir, char *filename, 
+void BaseApp::DumpOutputFile(const char *output_dir, const char *filename, 
                              int num_images, int num_cameras, int num_points,
                              int *added_order, 
                              camera_params_t *cameras, 
@@ -916,7 +916,7 @@ void BaseApp::WriteCamerasXML(const char *filename)
     }
     
     fprintf(f, "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n\n");
-    char *url_base = 
+    const char *url_base = 
 	"http://grail.cs.cornell.edu/projects/phototour/trevi/images";
 
     fprintf(f, "<url_base> %s </url_base>\n", url_base);
@@ -1136,7 +1136,7 @@ static char ply_header[] =
 "end_header\n";
 
 /* Write point files to a ply file */
-void BaseApp::DumpPointsToPly(char *output_directory, char *filename, 
+void BaseApp::DumpPointsToPly(const char *output_directory, const char *filename, 
                               int num_points, int num_cameras, 
                               v3_t *points, v3_t *colors,
                               camera_params_t *cameras 
