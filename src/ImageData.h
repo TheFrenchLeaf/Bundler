@@ -160,7 +160,7 @@ public:
     }
 
     /* Initialize the image data given a string description */
-    void InitFromString(char *buf, char *path, bool fisheye_by_default);
+    void InitFromString(char *buf, const char *path, bool fisheye_by_default);
 
     /* Create a pinhole view for the keys */
     void UndistortKeys();

@@ -272,7 +272,7 @@ int main(int argc, char **argv)
     
     char *list_file = argv[1];
     char *bundle_file = argv[2];
-    char *output_path = "pmvs";
+    const char *output_path = "pmvs";
 
     if (argc == 4)
         output_path = argv[3];

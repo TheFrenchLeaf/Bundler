@@ -390,10 +390,10 @@ public:
     /* Output routines */
 
     /* IO routines */
-    void ReadGeometricConstraints(char *filename);
-    void WriteGeometricConstraints(char *filename);
-    void WriteTracksForSameer(char *filename);
-    void WriteTracks(char *filename);
+    void ReadGeometricConstraints(const char *filename);
+    void WriteGeometricConstraints(const char *filename);
+    void WriteTracksForSameer(const char *filename);
+    void WriteTracks(const char *filename);
     void ReadCameraConstraints();
     void ReadPointConstraints();
     void ReadIntrinsicsFile();
@@ -450,14 +450,14 @@ public:
 
 #ifndef __DEMO__
     /* Write point files to a ply file */
-    void DumpPointsToPly(char *output_directory, char *filename, 
+    void DumpPointsToPly(const char *output_directory, const char *filename, 
                          int num_points, int num_cameras, 
 			 v3_t *points, v3_t *colors, camera_params_t *cameras
                          /*bool reflect = true*/);
 
     /* Dump an output file containing information about the current
      * state of the world */
-    void DumpOutputFile(char *output_dir, char *filename, 
+    void DumpOutputFile(const char *output_dir, const char *filename, 
 			int num_images, int num_cameras, int num_points,
 			int *added_order, 
 			camera_params_t *cameras, v3_t *points, v3_t *colors,
@@ -580,13 +580,13 @@ public:
     bool m_bundle_provided;      /* Was a bundle adjustment file given? */
     char *m_bundle_file;         /* Bundle file */
 
-    char *m_match_directory;     /* Which directory are the matches
+    const char *m_match_directory;     /* Which directory are the matches
 				  * stored in? */
     char *m_match_index_dir;     /* Which directory are match indexes
                                   * stored in? */
     char *m_match_table;         /* File where match table is stored */
-    char *m_key_directory;
-    char *m_image_directory;
+    const char *m_key_directory;
+    const char *m_image_directory;
     char *m_sift_binary;         /* Where can we find the sift binary? */
 
     bool m_estimate_up_vector_szeliski;  /* Estimate the up vector
