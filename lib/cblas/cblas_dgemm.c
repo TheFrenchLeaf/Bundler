@@ -8,6 +8,7 @@
  */
 
 #include "cblas.h"
+ #include "../clapack/INSTALL/blaswrap.h"
 #if defined(MACOS) || defined(WIN32)
   #include "../clapack/INSTALL/blaswrap.h"
 #else

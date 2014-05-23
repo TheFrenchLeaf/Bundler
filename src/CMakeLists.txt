@@ -10,8 +10,11 @@ ENDIF(WIN32)
 IF(WIN32)
 SET(MATH_LIBS clapack cblas cminpack f2c)
 ELSE(WIN32)
-#Clapack stuff is not the same under unix system
-SET(MATH_LIBS lapack cblas cminpack -lgfortran)
+#-------------Clapack stuff is not the same under unix system
+#-------------SET(MATH_LIBS lapack blas cminpack -lgfortran)
+#if Not use gfortran ,can use the f2c on linux too  add by HaiyangXu.
+#
+SET(MATH_LIBS clapack cblas cminpack f2c)
 ENDIF(WIN32)
 
 #Detect OpenMP
