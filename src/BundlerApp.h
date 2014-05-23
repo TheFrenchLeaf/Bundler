@@ -617,7 +617,7 @@ class SkeletalApp : public BundlerApp
 {
 public:
     SkeletalApp() {
-        BundlerApp::BundlerApp();
+      //  BundlerApp::BundlerApp();
         m_start_camera = -1;
     }
 
