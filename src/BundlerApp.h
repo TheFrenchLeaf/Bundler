@@ -616,8 +616,7 @@ typedef std::pair<int,int> IntPair;
 class SkeletalApp : public BundlerApp
 {
 public:
-    SkeletalApp() {
-        BundlerApp::BundlerApp();
+    SkeletalApp() : BundlerApp() {
         m_start_camera = -1;
     }
 
